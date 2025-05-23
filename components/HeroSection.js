@@ -9,7 +9,7 @@ const HeroSection = () => {
           Hi, I'm Christian {/* **REPLACE** */}
         </h1>
         <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-          A passionate Engineer, Researcher, and Maker building exciting projects and sharing my journey. {/* **REPLACE** */}
+          A passionate Engineer, Researcher, and Maker, building exciting projects and sharing my journey. {/* **REPLACE** */}
         </p>
         <div className="space-y-4 sm:space-y-0 sm:space-x-4">
           <Link href="/projects" className="inline-block bg-white text-indigo-600 font-semibold py-3 px-8 rounded-lg shadow-md hover:bg-gray-100 transition duration-300 w-full sm:w-auto">
