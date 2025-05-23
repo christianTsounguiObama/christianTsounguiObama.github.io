@@ -42,7 +42,7 @@ export default function ContactPage() {
               <p className="text-gray-600 dark:text-gray-400 mb-6">
                 Have a project in mind, a collaboration idea, or just want to say hi? Fill out the form, and I'll get back to you!
               </p>
-              <form onSubmit={handleSubmit} action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST"> {/* **REPLACE YOUR_FORMSPREE_ID** */}
+              <form onSubmit={handleSubmit} action="https://formspree.io/f/xzzrqlav" method="POST"> {/* **REPLACE YOUR_FORMSPREE_ID** */}
                 <div className="mb-4">
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300">Full Name</label>
                   <input type="text" name="name" id="name" required className="mt-1 block w-full px-3 py-2 bg-white dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" />
