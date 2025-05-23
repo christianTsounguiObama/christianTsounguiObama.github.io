@@ -1,0 +1,65 @@
+name: Deploy to GitHub Pages
+
+# Run workflow on pushes to the main branch
+on:
+  push:
+    branches:
+      - main # Or master, or your default branch
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Allow only one concurrent deployment, skipping runs queued between the latest and currently running one.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0' # Or '16', '20', or your project's required Node.js version
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci # 'ci' is generally preferred for CI environments over 'install'
+
+      - name: Build project
+        run: npm run build # Or your specific build command (e.g., npm run generate)
+        # If your base path is set via an environment variable during build (less common with modern tools):
+        # env:
+        #   PUBLIC_URL: /your-repo-name # Example for Create React App if homepage isn't set in package.json
+        #   VITE_BASE_URL: /your-repo-name # Example if your Vite config reads this
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        # This action sets up the necessary permissions for deploying to GitHub Pages.
+        # If your framework (like Next.js) creates a specific output structure,
+        # you might not need custom `base_path` here if it's handled by the framework config.
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Path to the directory containing your static build output
+          path: ./out # IMPORTANT: Change './dist' to your actual build output folder (e.g., ./build, ./out)
+
+  deploy:
+    needs: build # This job depends on the 'build' job completing successfully
+    permissions:
+      pages: write      # to deploy to Pages
+      id-token: write   # to verify the deployment token
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }} # The URL where the site will be deployed
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        # This action takes the artifact uploaded by 'upload-pages-artifact' and deploys it.
