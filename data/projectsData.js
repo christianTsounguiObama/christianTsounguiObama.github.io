@@ -59,7 +59,7 @@ export const projects = [
     title: 'Reading temperature and humidity data from DHT11 and UART Transmission in low-level C on Arduino ATmega2560',
     category: 'Robotics', // Assigning a category, though it might be "Other"
     description: 'This project implements a direct interface between an ATmega2560 microcontroller (Arduino Mega) and a DHT11 temperature and humidity sensor using bare-metal C, without relying on external libraries. The measured data is then transmitted via the UART protocol to a serial terminal or another device. The goal is to understand the 1-Wire communication protocol specific to the DHT11, implement it through direct register manipulation, and configure UART to send the data in ASCII format.',
-    image: '/images/projects/dht11_Schematics.png',
+    image: '/images/projects/dht1Schematics.png',
     tags: ['Embedded systems', 'Arduino', 'Sensors reading', 'Registers', 'ATmega2560'],
     youtubeUrl: null,
     githubUrl: 'https://github.com/christianTsounguiObama/dht11UART',
