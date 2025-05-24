@@ -6,11 +6,11 @@ export const projects = [
 
  {
     slug: 'research-snpmodel',
-    title: 'Statistical Modeling of Genomic Data for Malaria Drug Resistance Analysis',
+    title: 'Statistical Model to analyze single nucleotide polymorphisms data for Malaria Drug Resistance',
     category: 'Research', // Category assigned
-    description: 'Developed a statistical model to analyze genomic data—specifically single nucleotide polymorphisms (SNPs)—collected from malaria patients. The model enables the investigation of key malaria control metrics, including the spread of drug resistance. Findings were published in a peer-reviewed journal.',
+    description: 'Developed a statistical model to analyze genomic data—specifically single nucleotide polymorphisms (SNPs)—collected from malaria patients. The model enables the investigation of key malaria control metrics, including the spread of drug resistance. Findings are published in Frontiers in epidemiology.',
     image: '/images/projects/snp.png', // **CREATE THIS IMAGE**
-    tags: ['Research', 'Statistical Modelling', 'Simulation', 'Software devolpment', 'Population Genetics', 'Data Analysis'],
+    tags: ['Research', 'Statistical Modelling', 'Simulation', 'Software devolpment', 'Population Genetics', 'Drug resistance', 'Data Analysis'],
     youtubeUrl: null, // Or link to a presentation if you have one
     githubUrl: 'https://github.com/Maths-against-Malaria/MultiLociBiallelicModel',
    // liveDemoUrl: 'https://huggingface.co/spaces/yourusername/paper-analyzer', // Example if you deployed a demo
@@ -22,6 +22,30 @@ export const projects = [
     ],
     sharedMaterials: [
       { name: 'Published Paper (Link)', url: 'https://doi.org/10.3389/fepid.2022.943625' },
+     // { name: 'Presentation Slides (PDF)', url: '/downloads/nlp_research_slides.pdf' },
+     // { name: 'Code Repository (GitHub)', url: 'https://github.com/Maths-against-Malaria/MultiLociBiallelicModel' },
+    ],
+  },
+
+
+ {
+    slug: 'research-strmodel',
+    title: 'Probabilistic model to analyze microsatellite markers for malaria control',
+    category: 'Research', // Category assigned
+    description: 'Developped a model to analyze molecular data consisting of a pair of highly polymorphic markers (short tandem repeats; STRs) collected from malaria patients. The models allows to estimate the relative abundance of malaria pathogens and enables the usage of population genetics quantities such as linkage disequilibrium and heterozygosity. Findings are published in a PLoS One',
+    image: '/images/projects/str.png', // **CREATE THIS IMAGE**
+    tags: ['Research', 'Probabilistic Modelling', 'Simulation', 'Software devolpment', 'Population Genetics', 'Data Analysis'],
+    youtubeUrl: null, // Or link to a presentation if you have one
+    githubUrl: 'https://github.com/Maths-against-Malaria/MultiAllelicBiLociModel',
+   // liveDemoUrl: 'https://huggingface.co/spaces/yourusername/paper-analyzer', // Example if you deployed a demo
+    techStack: ['R', 'ggplot2', 'Git', 'LaTex'],
+    myRole: 'Primary researcher and developer. Built and implemented the model, ran simulation studies, analyzed data,  and co-authored the publication.',
+    galleryImages: [
+      '/images/projects/snp.png',
+      '/images/projects/nlp-research/results-graph.jpg',
+    ],
+    sharedMaterials: [
+      { name: 'Published Paper (Link)', url: 'https://doi.org/10.1371/journal.pone.0321723' },
      // { name: 'Presentation Slides (PDF)', url: '/downloads/nlp_research_slides.pdf' },
      // { name: 'Code Repository (GitHub)', url: 'https://github.com/Maths-against-Malaria/MultiLociBiallelicModel' },
     ],
