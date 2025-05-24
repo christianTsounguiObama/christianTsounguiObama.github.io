@@ -21,7 +21,7 @@ const HeroSection = () => {
   return (
     <SectionAnimator animationClass="fade-in">
       {/* Make the main section relative to position the scroll indicator */}
-      <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-600 text-white rounded-lg shadow-xl mb-12 overflow-hidden">
+      <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-[#0072b2] to-[#a0acbd] text-white rounded-lg shadow-xl mb-12 overflow-hidden">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center">
 
