@@ -10,7 +10,7 @@ module.exports = {
       // Example:
        colors: {
          'brand-primary': '0072b2',//'#3498db',
-      //   'brand-accent': '#e74c3c',
+         'brand-accent': '#a0acbd', //'#e74c3c',
        },
     },
   },
