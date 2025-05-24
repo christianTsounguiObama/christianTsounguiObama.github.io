@@ -12,7 +12,7 @@ const Navbar = () => {
     { href: '/projects', label: 'Projects' },
     { href: '/about', label: 'About' },
     { href: '/contact', label: 'Contact' },
-    { href: 'https://www.youtube.com/@christiantsounguitech', label: 'YouTube', external: true }, // Example external link
+  //  { href: 'https://www.youtube.com/@christiantsounguitech', label: 'YouTube', external: true }, // Example external link
   ];
 
   // Close mobile menu on route change
